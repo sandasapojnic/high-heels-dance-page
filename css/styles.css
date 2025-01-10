@@ -56,6 +56,17 @@ header nav .menu li a:hover {
     border-radius: 5px;
 }
 
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .hamburger-button {
     display: none;
     background: none;
@@ -173,6 +184,148 @@ header nav .menu li a:hover {
     border-radius: 8px;
 }
 
+/* Services Section */
+#services {
+    background-color: #f5f5f5;
+    padding: 30px 20px;
+}
+
+.services-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.services-title h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color:  #333;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background-color: #56575a;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1 1 calc(33.33% - 20px);
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 1.1rem;
+    color: #f5f5f5;
+    margin-bottom: 15px;
+}
+
+.service-card img {
+    width: 100%;
+    height: auto;
+    max-height: 250px; 
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#gallery {
+    padding: 40px 0;
+    background-color: #f5f5f5;
+}
+
+.gallery-title h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color:  #333;
+}
+
+.gallery-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex-shrink: 0;
+    width: calc(33.33% - 20px); 
+    height: 300px; 
+    position: relative;
+}
+
+.gallery-media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item:hover .gallery-media {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.carousel-item:hover .video-container {
+    z-index: 3;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 @media screen and (max-width: 768px) {
     header .container {
         background: #333;
@@ -266,6 +419,26 @@ header nav .menu li a:hover {
         max-width: 100%;
         height: auto;
         border-radius: 8px;
+    }
+
+    .services-container {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .service-card {
+        flex: 1 1 100%; 
+        margin-bottom: 20px; 
+    }
+
+    .carousel-item {
+        width: calc(50% - 20px); 
+        height: 200px; 
+    }
+
+    .carousel-button {
+        font-size: 24px;
+        padding: 10px;
     }
 
     #home {

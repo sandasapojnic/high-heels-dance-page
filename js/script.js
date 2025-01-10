@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
         menu.classList.toggle('open');
 
         if (menuButton.textContent === '☰') {
-            menuButton.textContent = '✖';
+            menuButton.textContent = '✖️';
         } else {
             menuButton.textContent = '☰'; 
         }
@@ -46,6 +46,66 @@ document.addEventListener('DOMContentLoaded', function () {
 
             menu.classList.remove('open');
             menuButton.textContent = '☰';
+        });
+    });
+
+    const carousel = document.querySelector('.carousel');
+    const prevButton = document.getElementById('prev-btn');
+    const nextButton = document.getElementById('next-btn');
+
+    let currentIndex = 0;
+    const items = document.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+
+    function updateCarousel() {
+        const offset = -currentIndex * (items[0].offsetWidth + 20);
+        carousel.style.transform = `translateX(${offset}px)`;
+    }
+
+    prevButton.addEventListener('click', function () {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = totalItems - 1;
+        }
+        updateCarousel();
+    });
+   
+    nextButton.addEventListener('click', function () {
+        if (currentIndex < totalItems - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0; 
+        }
+        updateCarousel();
+    });
+
+    setInterval(function () {
+        nextButton.click();
+    }, 5000);
+
+    const videos = document.querySelectorAll('.gallery-media');
+
+    videos.forEach(video => {
+        video.addEventListener('mouseover', function () {
+            try {
+                if (video.paused) {
+                    video.play();
+                }
+            } catch (error) {
+                console.error('Eroare la redarea video-ului: ', error);
+            }
+        });
+
+        video.addEventListener('mouseleave', function () {
+            try {
+                if (!video.paused) {
+                    video.pause();
+                    video.currentTime = 0;
+                }
+            } catch (error) {
+                console.error('Eroare la pauză video-ului: ', error);
+            }
         });
     });
 });
