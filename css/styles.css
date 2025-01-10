@@ -1,0 +1,274 @@
+body, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav .menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header nav .menu li {
+    display: inline;
+}
+
+header nav .menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: background 0.3s;
+}
+
+header nav .menu li a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+
+.hamburger-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Home Section */
+#home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.small-image {
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    width: 40%;
+    z-index: 1;
+}
+
+.small-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.quote {
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.8rem;
+    font-weight: bold;
+    z-index: 2;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* About Title Section */
+.about-title {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.about-title h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* About Section */
+#about {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+#about.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#about {
+    background-color: #dcdcdc;
+    padding: 30px 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.about-image {
+    flex: 1;
+    text-align: right;
+}
+
+.about-image img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    header .container {
+        background: #333;
+        color: #fff;
+        padding: 10px 20px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-right: auto;
+    }
+
+    .hamburger-button {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    header nav .menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #333;
+        padding: 20px;
+        border-radius: 5px;
+        width: 200px;
+    }
+
+    header nav .menu.open {
+        display: flex;
+    }
+
+    header nav .menu li {
+        display: block;
+        text-align: right;
+    }
+
+    header nav .menu li a {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .small-image {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        z-index: 1;
+    }
+
+    .quote {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: bold;
+        z-index: 2;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        font-size: 1.2rem;
+    }
+
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-text, .about-image {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    #home {
+        height: auto;
+    }
+}
