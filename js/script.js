@@ -87,18 +87,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const scrollTopBtn = document.getElementById("scroll-top-btn");
 
+  function checkScreenSize() {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth < 768) {
+      scrollTopBtn.style.backgroundColor = "#aaa";
+    } else {
+      scrollTopBtn.style.backgroundColor = "#aaa";
+    }
+  }
+
   window.onscroll = function () {
     if (
       document.body.scrollTop > 20 ||
       document.documentElement.scrollTop > 20
     ) {
-      scrollTopBtn.style.display = "block";
+      scrollTopBtn.classList.add("show");
     } else {
-      scrollTopBtn.style.display = "none";
+      scrollTopBtn.classList.remove("show");
     }
   };
 
   scrollTopBtn.addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    scrollTopBtn.classList.add("active");
+    setTimeout(function () {
+      scrollTopBtn.classList.remove("active");
+      scrollTopBtn.style.backgroundColor = "#aaa";
+    }, 500);
   });
+
+  // Când cursorul trece pe buton
+  scrollTopBtn.addEventListener("mouseover", function () {
+    if (!scrollTopBtn.classList.contains("active")) {
+      scrollTopBtn.style.backgroundColor = "#c40004";
+    }
+  });
+
+  scrollTopBtn.addEventListener("mouseout", function () {
+    if (!scrollTopBtn.classList.contains("active")) {
+      scrollTopBtn.style.backgroundColor = "#aaa";
+    }
+  });
+
+  window.addEventListener("resize", checkScreenSize);
+  checkScreenSize();
 });

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Playpen+Sans:wght@100..800&family=Sofadi+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Playpen+Sans:wght@100..800&family=Sofadi+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'); 
 *,
 *::before,
 *::after {
@@ -11,8 +10,6 @@
 body {
   font-family: "DM Serif Text", serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #CED4DA;
 }
 
 /* Header */
@@ -29,7 +26,6 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -61,9 +57,8 @@ header nav .menu li a {
 }
 
 header nav .menu li a:hover {
-  background: #e4e4e4;
   border-radius: 5px;
-  color: #5f4646;
+  color: #a00003;
 }
 
 section {
@@ -97,12 +92,21 @@ section.visible {
   align-items: center;
 }
 
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
 .image-container {
   position: relative;
   width: 100%;
   height: 100%;
 }
-
 .main-image {
   width: 100%;
   height: 100%;
@@ -173,7 +177,7 @@ section.visible {
 }
 
 #about {
-  background-color: #E5D0CC;
+  background-color: white;
   padding: 30px 20px;
 }
 
@@ -207,7 +211,7 @@ section.visible {
 }
 
 #services {
-  background-color: #dfdbdb;
+  background-color: white;
   padding: 30px 20px;
 }
 
@@ -224,6 +228,7 @@ section.visible {
 
 .services-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
   max-width: 1200px;
@@ -232,8 +237,6 @@ section.visible {
 }
 
 .service-card {
-  background-color: #7F7B82;
-  color: #fff;
   padding: 20px;
   border-radius: 8px;
   flex: 1 1 calc(33.33% - 20px);
@@ -253,7 +256,7 @@ section.visible {
 
 .service-card p {
   font-size: 1.1rem;
-  color: #f5f5f5;
+  color: #0f0f0f;
   margin-bottom: 15px;
 }
 
@@ -268,7 +271,7 @@ section.visible {
 #gallery {
   padding: 20px;
   text-align: center;
-  background-color: #E5D0CC;
+  background-color: white;
 }
 
 .gallery-title h2 {
@@ -329,7 +332,6 @@ section.visible {
 
 #contact {
   padding: 50px 0;
-  background-color: #dfdbdb;
 }
 
 .booking-title h2 {
@@ -338,82 +340,59 @@ section.visible {
   margin-bottom: 20px;
 }
 
-.booking-container {
+/* Contact Section */
+.contact-container {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 10px;
-}
-
-.booking-description,
-.booking-form {
-  width: 45%;
-  box-sizing: border-box;
-}
-
-.booking-description {
-  padding: 15px;
-}
-
-.booking-form {
-  background-color: #f9f9f9;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: auto;
 }
 
-.booking-form label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
+.contact-description {
+  text-align: center;
+  padding: 20px;
+  max-width: 600px;
 }
 
-.booking-form input,
-.booking-form textarea {
-  width: 100%;
-  padding: 10px;
+.contact-description h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.contact-description p {
+  font-size: 1.3rem;
   margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-  box-sizing: border-box;
 }
 
-.booking-form input:focus,
-.booking-form textarea:focus {
-  border-color: #7391c8;
+.contact-description p:first-child {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.booking-form button {
-  padding: 10px 20px;
-  background-color: #7391c8;
+.contact-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #c40004;
   color: white;
-  border: none;
+  font-size: 1.2rem;
+  text-decoration: none;
   border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
+  margin-bottom: 20px;
 }
 
-.booking-form button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
+.contact-button:hover {
+  background-color: #ad4c4d;
 }
 
-.example-text {
-  font-size: 0.7rem;
-  font-style: italic;
-  color: #888;
-  margin-left: 5px;
-}
-
-.booking-icons {
+.contact-icons {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 .contact-item {
@@ -425,7 +404,6 @@ section.visible {
   width: 24px;
   height: 24px;
   margin-right: 10px;
-  color: #7F7B82;
 }
 
 .contact-item span {
@@ -438,7 +416,7 @@ section.visible {
 }
 
 .contact-link:hover {
-  color: #7391c8;
+  color: #a00003;
 }
 
 #footer {
@@ -476,22 +454,35 @@ section.visible {
   position: fixed;
   right: 20px;
   bottom: 20px;
-  display: none;
+  visibility: hidden; 
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+#scroll-top-btn.show {
+  visibility: visible;
+  opacity: 1;
 }
 
 #scroll-top-btn:hover {
-  background-color: #888;
+  background-color: #c40004;
 }
 
 #scroll-top-btn:focus {
   outline: none;
 }
 
+#scroll-top-btn.active {
+  visibility: hidden;
+  opacity: 0;
+}
+
 #scroll-top-btn i {
-  font-size: 2rem; 
-  font-weight: bold; 
+  font-size: 2rem;
+  font-weight: bold;
   color: black;
 }
+
 
 @media (max-width: 480px) {
   .swiper-container {
@@ -520,19 +511,13 @@ section.visible {
     font-size: 1.5rem;
   }
 
-  .example-text {
-    font-size: 0.8rem;
-  }
-
-  .booking-form {
-    padding: 10px;
-  }
 }
 
 @media screen and (max-width: 768px) {
+  header {
+    width: 100%;
+  }
   header .container {
-    background: #333;
-    color: #fff;
     padding: 10px 20px;
     position: sticky;
     top: 0;
@@ -552,7 +537,7 @@ section.visible {
     display: block;
     background: none;
     border: none;
-    color: white;
+    color: #c40004;
     font-size: 2rem;
     cursor: pointer;
   }
@@ -642,22 +627,31 @@ section.visible {
     margin-top: 40px;
   }
 
-  #home {
-    height: auto;
-  }
-
-  .booking-container {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .booking-description,
-  .booking-form {
+  #background-video {
     width: 100%;
-    margin: 0 10px;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .contact-icons {
+    flex-direction: column;
+    gap: 10px; 
+    justify-content: center;
   }
 
-  .booking-form {
-    padding: 15px;
+  .contact-item {
+    width: auto;
+    align-items: flex-start;
+  }
+
+  .contact-item img {
+    width: 30px;
+    height: 30px;
+  }
+
+  #scroll-top-btn {
+    width: 40px; 
+    height: 40px;
+    font-size: 1.5rem;
   }
 }

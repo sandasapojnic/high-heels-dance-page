@@ -28,11 +28,12 @@
         <button id="hamburger-button" class="hamburger-button">☰</button>
       </div>
     </header>
-
-    <!-- Home Section -->
     <section id="home">
       <div class="image-container">
-        <img src="images/image1.jpg" alt="Фото тренера" class="main-image" />
+        <video id="background-video" autoplay muted loop>
+          <source src="videos/video2.mp4" type="video/mp4" />
+          Ваш браузер не поддерживает видео.
+        </video>
         <div class="small-image">
           <img src="images/image-small1.jpg" alt="Маленькая фото тренера" />
         </div>
@@ -45,7 +46,6 @@
         </div>
       </div>
     </section>
-
     <!-- About Section -->
     <section id="about">
       <div class="about-title">
@@ -95,6 +95,30 @@
           </p>
           <img src="images/stretching.jpg" alt="Service 3" />
         </div>
+        <div class="service-card">
+          <h3>Service 1</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+            itaque?
+          </p>
+          <img src="images/dance1.jpg" alt="Service 1" />
+        </div>
+        <div class="service-card">
+          <h3>Service 1</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+            itaque?
+          </p>
+          <img src="images/dance1.jpg" alt="Service 1" />
+        </div>
+        <div class="service-card">
+          <h3>Service 1</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+            itaque?
+          </p>
+          <img src="images/dance1.jpg" alt="Service 1" />
+        </div>
       </div>
     </section>
 
@@ -128,11 +152,8 @@
             </video>
           </div>
         </div>
-
-        <!-- Pagination -->
+       
         <div class="swiper-pagination"></div>
-
-        <!-- Navigation -->
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
       </div>
@@ -140,84 +161,41 @@
 
     <!-- Booking Section -->
     <section id="contact">
-      <div class="booking-title">
-        <h2>Контакты</h2>
-      </div>
-      <div class="container booking-container">
-        <div class="booking-description">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-            ea vitae atque doloribus tempora error omnis praesentium porro
-            nostrum sint?
-          </p>
+      <div class="container contact-container">
+        <div class="contact-description">
+          <h2>Контакты</h2>
+          <p><strong>У вас есть вопросы?</strong></p>
+          <p>Оставьте мне сообщение, и я свяжусь с вами.</p>
 
-          <!-- Iconițele adăugate sub text -->
-          <div class="booking-icons">
+          <a href="https://t.me/yourusername" class="contact-button" target="_blank">
+            Напишите мне
+          </a>
+
+          <p>Вы также можете связаться со мной:</p>
+
+          <div class="contact-icons">
             <div class="contact-item">
-              <a href="https://www.instagram.com" class="contact-link">
+              <a
+                href="https://www.instagram.com/yourusername"
+                class="contact-link"
+              >
                 <img src="icons/instagram-icon.png" alt="Instagram" />
                 <span>Instagram</span>
               </a>
             </div>
             <div class="contact-item">
-              <a href="https://www.telegram.com" class="contact-link">
-                <img src="icons/telegram-icon.png" alt="Telegram" />
-                <span>Telegram</span>
+              <a href="tel:+1234567890" class="contact-link">
+                <img src="icons/phone-icon.png" alt="Phone" />
+                <span>+1 234 567 89</span>
               </a>
             </div>
             <div class="contact-item">
-              <img src="icons/phone-icon.png" alt="Phone" />
-              <span>+1 234 567 89</span>
-            </div>
-            <div class="contact-item">
-              <img src="icons/email-icon.png" alt="Email" />
-              <span>email@example.com</span>
+              <a href="mailto:email@example.com" class="contact-link">
+                <img src="icons/email-icon.png" alt="Email" />
+                <span>email@example.com</span>
+              </a>
             </div>
           </div>
-        </div>
-
-        <div class="booking-form">
-          <form id="booking-form">
-            <label for="first-name"
-              >Имя <span class="example-text">(например: Иван)</span></label
-            >
-            <input type="text" id="first-name" placeholder="Введите ваше имя" />
-
-            <label for="last-name"
-              >Фамилия
-              <span class="example-text">(например: Иванов)</span></label
-            >
-            <input
-              type="text"
-              id="last-name"
-              placeholder="Введите вашу фамилию"
-            />
-
-            <label for="email"
-              >Электронная почта
-              <span class="example-text"
-                >(например: example@mail.com)</span
-              ></label
-            >
-            <input type="email" id="email" placeholder="Введите ваш email" />
-
-            <label for="phone"
-              >Телефон
-              <span class="example-text"
-                >(например: +37368324565 / +373 689 893 34 / 068123456)</span
-              ></label
-            >
-            <input
-              type="text"
-              id="phone"
-              placeholder="Введите ваш номер телефона"
-            />
-
-            <label for="subject">Тема</label>
-            <textarea id="subject" placeholder="Введите тему"></textarea>
-
-            <button type="submit" id="submit-btn" disabled>Отправить</button>
-          </form>
         </div>
       </div>
     </section>
@@ -232,6 +210,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/form.js"></script>
   </body>
 </html>
