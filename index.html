@@ -14,13 +14,16 @@
     <!-- Header Section -->
     <header>
       <div class="container">
-        <div class="logo">Логотип</div>
+        <div class="logo">
+          <img src="images/logo.png" alt="Logo" />
+        </div>
         <nav>
           <ul class="menu">
             <li><a href="#home">Главная</a></li>
             <li><a href="#about">Обо мне</a></li>
             <li><a href="#services">Услуги</a></li>
             <li><a href="#gallery">Галерея</a></li>
+            <li><a href="#reviews">Отзывы</a></li> 
             <li><a href="#contact">Контакты</a></li>
           </ul>
         </nav>
@@ -31,12 +34,9 @@
     <section id="home">
       <div class="image-container">
         <video id="background-video" autoplay muted loop>
-          <source src="videos/video2.mp4" type="video/mp4" />
+          <source src="videos/background.mp4" type="video/mp4" />
           Ваш браузер не поддерживает видео.
         </video>
-        <div class="small-image">
-          <img src="images/image-small1.jpg" alt="Маленькая фото тренера" />
-        </div>
         <div class="quote">
           <p>
             „Великий тренер не просто учит тебя упражнениям, он помогает тебе
@@ -141,7 +141,7 @@
           </div>
           <div class="swiper-slide">
             <video controls>
-              <source src="videos/video1.mp4" type="video/mp4" />
+              <source src="videos/background.mp4" type="video/mp4" />
               Ваш браузер не поддерживает видео.
             </video>
           </div>
@@ -158,7 +158,40 @@
         <div class="swiper-button-prev"></div>
       </div>
     </section>
-
+  
+    <section id="reviews">
+      <div class="review-title">
+        <h2>Отзывы наших клиентов</h2>
+      </div>
+      <div class="container">
+        <div class="reviews-slider">
+          <div class="review">
+            <img src="images/image-small1.jpg" alt="Клиент 1">
+            <p class="review-text">"Отличный сервис! Рекомендую!"</p>
+            <span class="review-name">- Анна Попеску</span>
+            <div class="stars">★★★★★</div>
+          </div>
+          <div class="review">
+            <img src="images/image-small1.jpg" alt="Клиент 2">
+            <p class="review-text">"Приятная атмосфера и профессиональные сотрудники!"</p>
+            <span class="review-name">- Михаил Ионеску</span>
+            <div class="stars">★★★★☆</div>
+          </div>
+          <div class="review">
+            <img src="images/image-small1.jpg" alt="Клиент 3">
+            <p class="review-text">"Обязательно вернусь снова, замечательный опыт!"</p>
+            <span class="review-name">- Мария Стан</span>
+            <div class="stars">★★★★★</div>
+          </div>
+          <div class="review">
+            <img src="images/image-small1.jpg" alt="Клиент 3">
+            <p class="review-text">"Обязательно вернусь снова, замечательный опыт!"</p>
+            <span class="review-name">- Мария Стан</span>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Booking Section -->
     <section id="contact">
       <div class="container contact-container">

@@ -14,7 +14,7 @@ body {
 
 /* Header */
 header {
-  background: #172121;
+  background: #000000;
   color: #fff;
   padding: 10px 20px;
   position: sticky;
@@ -33,9 +33,9 @@ header .container {
   width: 80%;
 }
 
-header .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+header .logo img {
+  height: 50px; /* Ajustează dimensiunea după nevoie */
+  display: block;
 }
 
 header nav .menu {
@@ -114,26 +114,11 @@ section.visible {
   opacity: 0.8;
 }
 
-.small-image {
-  position: absolute;
-  right: 10%;
-  top: 10%;
-  width: 40%;
-  z-index: 1;
-}
-
-.small-image img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
 /* Poziționarea citatului */
 .quote {
   position: absolute;
-  left: 10%;
-  top: 75%;
+  left: 20%;
+  top: 55%;
   transform: translateY(-50%);
   color: rgba(255, 255, 255, 0.8);
   font-size: 1.7rem;
@@ -206,7 +191,7 @@ section.visible {
 
 .about-image img {
   max-width: 70%;
-  height: auto;
+  max-height: 500px;
   border-radius: 8px;
 }
 
@@ -293,7 +278,7 @@ section.visible {
 .swiper-slide img,
 .swiper-slide video {
   width: 100%;
-  height: 100%;
+  height: 300px;
   max-height: 300px;
   object-fit: cover;
   border-radius: 10px;
@@ -328,6 +313,68 @@ section.visible {
 .swiper-button-next::after,
 .swiper-button-prev::after {
   font-size: 20px;
+}
+
+#reviews {
+  padding: 50px 0;
+  text-align: center;
+  background: #f8f8f8;
+}
+
+.reviews-slider {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
+}
+
+.review {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 300px;
+  scroll-snap-align: center;
+}
+
+.review img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.review-text {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #555;
+}
+
+.review-name {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.stars {
+  color: #FFD700;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.review-title {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.review-title h2 {
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 #contact {
@@ -420,7 +467,7 @@ section.visible {
 }
 
 #footer {
-  background-color: #172121;
+  background-color: #000000;
   color: white;
   padding: 20px 0;
   text-align: center;
@@ -568,16 +615,6 @@ section.visible {
     padding: 10px;
     text-align: center;
   }
-
-  .small-image {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    z-index: 1;
-  }
-
   .quote {
     left: 10%;
     width: 80%;
@@ -654,4 +691,16 @@ section.visible {
     height: 40px;
     font-size: 1.5rem;
   }
+  .reviews-slider {
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .review {
+    margin-bottom: 20px;
+    max-width: 100%;
+    width: 100%;
+  }
+  
 }
