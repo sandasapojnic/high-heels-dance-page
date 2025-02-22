@@ -16,7 +16,6 @@ body {
 header {
   background: #000000;
   color: #fff;
-  padding: 10px 20px;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -34,7 +33,7 @@ header .container {
 }
 
 header .logo img {
-  height: 50px; /* Ajustează dimensiunea după nevoie */
+  height: 70px;
   display: block;
 }
 
@@ -574,12 +573,6 @@ section.visible {
     align-items: center;
   }
 
-  header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-right: auto;
-  }
-
   .hamburger-button {
     display: block;
     background: none;
@@ -596,8 +589,8 @@ section.visible {
     position: absolute;
     top: 60px;
     right: 20px;
-    background: #333;
-    padding: 20px;
+    background: #000000;
+    padding: 10px;
     border-radius: 5px;
     width: 200px;
   }
