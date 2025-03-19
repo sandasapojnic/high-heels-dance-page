@@ -19,21 +19,22 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
-}
-
-.container {
-  width: 80%;
+  width: 100%;
 }
 
 header .logo img {
-  height: 70px;
+  height: auto;
+  max-height: 100px;
   display: block;
 }
 
@@ -189,8 +190,8 @@ section.visible {
 }
 
 .about-image img {
-  max-width: 70%;
-  max-height: 500px;
+  max-width: 100%;
+  max-height: 300px;
   border-radius: 8px;
 }
 
@@ -336,7 +337,9 @@ section.visible {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   max-width: 300px;
-  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
 }
 
 .review img {
@@ -351,19 +354,18 @@ section.visible {
   font-size: 1.2rem;
   font-style: italic;
   color: #555;
+  margin-bottom: 1ß0px;
 }
 
 .review-name {
-  display: block;
-  margin-top: 10px;
   font-weight: bold;
   color: #333;
+  margin-bottom: 10px;
 }
 
 .stars {
   color: #FFD700;
   font-size: 1.5rem;
-  margin-top: 10px;
 }
 
 .review-title {
@@ -375,6 +377,7 @@ section.visible {
   font-size: 2rem;
   font-weight: bold;
 }
+
 
 #contact {
   padding: 50px 0;
@@ -582,6 +585,17 @@ section.visible {
     cursor: pointer;
   }
 
+  section {
+    opacity: 1 !important;  
+    transform: translateY(0) !important;
+    transition: none; 
+  }
+
+  section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   header nav .menu {
     display: none;
     flex-direction: column;
@@ -635,15 +649,26 @@ section.visible {
   }
 
   .services-container {
-    flex-direction: column;
-    align-items: center;
+    max-width: 100%;
+    padding: 10px;
   }
 
   .service-card {
-    flex: 1 1 100%;
-    margin-bottom: 20px;
+    flex: 1 1 100%; 
+    min-height: 300px; 
   }
 
+  .services-title h2 {
+    font-size: 2rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .service-card p {
+    font-size: 1rem;
+  }
   .swiper-container {
     height: 300px;
   }
