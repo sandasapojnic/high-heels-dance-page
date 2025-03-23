@@ -15,7 +15,9 @@
     <header>
       <div class="container">
         <div class="logo">
-          <img src="images/logo.png" alt="Logo" />
+          <a href="#home">
+            <img src="images/logo.png" alt="Logo" />
+          </a>
         </div>
         <nav>
           <ul class="menu">
@@ -32,15 +34,10 @@
       </div>
     </header>
     <section id="home">
-      <div class="video-background">
-        <iframe
-          src="https://player.vimeo.com/video/1068536270?h=e708a66aa4&autoplay=1&loop=1&background=1&muted=1"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen
-        >
-        </iframe>
-      </div>
+      <video id="background-video" autoplay muted loop>
+        <source src="videos/background.mp4" type="video/mp4" />
+        Ваш браузер не поддерживает видео.
+      </video>
       <div class="quote">
         <p>
           „LadyHub - пространство танца, женственности и свободы тела, в твоем
@@ -54,6 +51,9 @@
         <h2>Обо мне</h2>
       </div>
       <div class="container about-container">
+        <div class="about-image">
+          <img src="images/about-image.jpg" alt="Фото тренера" />
+        </div>
         <div class="about-text">
           <p>
             Привет, меня зовут Александра! Я тренер, моя страсть - помогать
@@ -62,9 +62,6 @@
             вдохновлять и поддерживать вас на пути к здоровому и свободному
             телу, а также помогать активировать женскую энергию через танец!
           </p>
-        </div>
-        <div class="about-image">
-          <img src="images/about-image.jpg" alt="Фото тренера" />
         </div>
       </div>
     </section>
@@ -75,7 +72,7 @@
       </div>
       <div class="services-container">
         <div class="service-card">
-          <h3>Групповые занятия High Heels</h3>
+          <h3>Групповые занятия <br />High Heels</h3>
           <p>
             Танцевальная тренировка два раза в неделю, на высоких каблуках в
             группе до 10 человек. Группа подойдет для тех девушек, которые хотят
@@ -117,6 +114,7 @@
         </div>
         <div class="service-card">
           <h3>Online тренировка</h3>
+          <br /><br /><br />
           <p>
             Тренировка Stretching (растяжка) по видеосвязи или тренировка Power
             Stretching (подкачка + растяжка) по видеосвязи. Занимайся с любимым
@@ -127,13 +125,13 @@
           <img src="images/dance1.jpg" alt="Service 1" />
         </div>
         <div class="service-card">
-          <h3>Профессиональный курс "Тренер по танцам High Heels"</h3>
+          <h3>Kурс "Тренер по танцам High Heels"</h3>
           <p>
             Cтруктурированный offline курс по обучению танцевальной технике и
             базе heels. Подойдет для девушек, которые хотят сделать танец своей
             профессией. После курса вы сможете начать свой бизнес в сфере танца
             High Heels, а также будете знать как продвигать свои услуги и найти
-            первых клиентов. Курс НЕ подойдет для начинающих танцовщиков.
+            первых клиентов.
           </p>
           <img src="images/dance1.jpg" alt="Service 1" />
         </div>
@@ -153,15 +151,15 @@
         </div>
         <div class="service-card">
           <h3>Магазин BestFit</h3>
+          <br />
+          <br /><br />
           <p>
             В продаже профессиональные туфли для танцев High Heels. В наличии
             или под заказ любой размер профессиональной пары для танцев. О наших
             туфлях: изготовлены из высококачественных материалов, разработанных
             для долговременной эксплуатации. Для удобства и комфорта есть
-            шнуровка и молния, каблук 9-10 см, удобная колодка. Специально
-            разработанная танцевальная пара из мягкого материала для
-            сбалансированных движений и легких вращений, станет незаменимым
-            инструментом на пути к достижению высоких результатов в вашем танце.
+            шнуровка и молния, каблук 9-10 см, колодка специально разработана
+            для танца.
           </p>
           <img src="images/dance1.jpg" alt="Service 1" />
         </div>
@@ -184,7 +182,7 @@
       <div class="gallery-title">
         <h2>Галерея</h2>
       </div>
-    
+
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <!-- Slides -->
@@ -198,21 +196,19 @@
             <img src="images/gallery3.jpg" alt="Image 3" />
           </div>
           <div class="swiper-slide">
-            <iframe
-              src="https://player.vimeo.com/video/1068536270?h=e708a66aa4&autoplay=1&loop=1"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowfullscreen>
-            </iframe>
+            <video controls>
+              <source src="videos/background.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div class="swiper-slide">
-            <iframe
-              src="https://player.vimeo.com/video/1068536270?h=e708a66aa4&autoplay=1&loop=1"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowfullscreen>
-            </iframe>
+            <video controls>
+              <source src="videos/background.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
-    
+
         <div class="swiper-pagination"></div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
@@ -223,7 +219,7 @@
       <div class="review-title">
         <h2>Отзывы танцующих девушек</h2>
       </div>
-      <div class="container">
+      <div class="review-container">
         <div class="reviews-slider">
           <div class="review">
             <div class="review-content">
@@ -263,6 +259,7 @@
               </div>
             </div>
           </div>
+
           <div class="review">
             <div class="review-content">
               <div class="review-image">
@@ -282,6 +279,7 @@
               </div>
             </div>
           </div>
+
           <div class="review">
             <div class="review-content">
               <div class="review-image">
@@ -296,6 +294,27 @@
               </div>
               <div class="review-name">
                 <span>- Екатерина Мирзак</span>
+              </div>
+              <div class="stars">
+                <span>★★★★★</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review">
+            <div class="review-content">
+              <div class="review-image">
+                <img src="images/review-5.jpg" alt="Клиент 5" />
+              </div>
+              <div class="review-text">
+                <p>
+                  "Уроки танцев с Сашей всегда — это вдохновение и хорошее
+                  настроение. Не имеет значения, какой у тебя был день, здесь —
+                  место, где ты все забываешь и только наслаждаешься.!"
+                </p>
+              </div>
+              <div class="review-name">
+                <span>- Наталья Иванова</span>
               </div>
               <div class="stars">
                 <span>★★★★★</span>
