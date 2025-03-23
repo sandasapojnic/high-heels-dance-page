@@ -137,6 +137,10 @@ section.visible {
   opacity: 1;
 }
 
+.quote.hidden {
+  opacity: 0;
+}
+
 /* About Title Section */
 .about-title {
   text-align: center;
@@ -737,5 +741,11 @@ section.visible {
 @media (max-width: 480px) {
   .review {
     width: 100%; 
+  }
+}
+@media (min-width: 1300px) {
+  .service-card img {
+    height: 300px;
+    max-height: 350px;
   }
 }

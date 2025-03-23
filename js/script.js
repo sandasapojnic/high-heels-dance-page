@@ -29,9 +29,14 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("load", () => {
     const quote = document.querySelector(".quote");
     setTimeout(() => {
-      quote.classList.add("visible");
+        quote.classList.add("visible");
+
+        setTimeout(() => {
+            quote.classList.remove("visible");
+            quote.classList.add("hidden");
+        }, 4000);
     }, 1000);
-  });
+});
 
   const menuLinks = document.querySelectorAll('a[href^="#"]');
 
